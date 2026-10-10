@@ -1,5 +1,7 @@
 # API Arena
 
+[![ci](https://github.com/MertDas24/api-arena/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/MertDas24/api-arena/actions/workflows/ci.yml)
+
 Connect your application to **controlled API failure scenarios**, watch what it actually sends, and get an **evidence-based report** — then fix your client and compare the next run.
 
 > Similar tools exist (Mockoon, WireMock, Webhook.site). API Arena's focus is a guided, explain-as-you-go flow for junior developers and small teams. This is a learning/portfolio project and a market hypothesis — no validated demand or revenue.

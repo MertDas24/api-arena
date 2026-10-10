@@ -23,4 +23,4 @@ API DB transaction'ında teslim planı/job yazar; Worker lease ile claim eder. G
 ## Operasyon ve henüz olmayanlar
 Üç migration var; production normal app startup'ta migration yapmaz, ayrı `--migrate` job'udur. Yeni production Identity key ring PFX ile şifrelenir; DB backup yanında private cert backup gerekir. Yerel fresh migration/checksum restore ve bounded load ölçüldü; Docker/public TLS/hosting smoke yapılmadı.
 
-Custom schema/compiler/API testli, editör UI eksik. ShareLinks şeması var ama paylaşım endpoint'i yok. Retention/metrics/exporter/alert henüz uygulanmadı; hesap silme testli. Üyelik, CI service key, abonelik ve gerçek tahsilat kapsam dışı. Bunlar canlı özellik gibi anlatılmaz.
+Özel senaryo editörü (önizleme, içe/dışa aktarma, sürümler), salt okunur paylaşım linkleri, retention işi, düşük kardinaliteli metrikler ve hesap silme uygulandı ve testli. Metrik/alarm alıcısı bağlı değil; GitHub CI yeşil. Üyelik, CI service key, abonelik ve gerçek tahsilat kapsam dışı. Bunlar canlı özellik gibi anlatılmaz.
