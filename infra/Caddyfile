@@ -1,0 +1,24 @@
+{
+    admin off
+    http_port 8080
+    https_port 8443
+}
+
+http://:8090 {
+    respond /health/live 200
+}
+
+{$CONTROL_HOST} {
+    header Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    @api path /api/*
+    reverse_proxy @api api:8080
+    reverse_proxy frontend:3000
+}
+
+{$SIMULATOR_HOST} {
+    header Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    # Drop control-plane cookies even if a caller manually forwards them.
+    reverse_proxy simulator:8080 {
+        header_up -Cookie
+    }
+}

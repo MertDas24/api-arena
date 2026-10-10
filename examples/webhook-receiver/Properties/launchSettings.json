@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ApiArena.WebhookReceiver": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5160",
+      "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development" }
+    }
+  }
+}

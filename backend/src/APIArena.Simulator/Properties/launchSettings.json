@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "APIArena.Simulator": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5151",
+      "environmentVariables": { "ASPNETCORE_ENVIRONMENT": "Development" }
+    }
+  }
+}

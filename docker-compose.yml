@@ -1,0 +1,24 @@
+# Local SQL Server for macOS (Intel) / Linux / CI. Windows developers can use a native SQL Server instead (see README).
+# The SA password is NOT stored here: create it with scripts/dev-secrets.(ps1|sh), which writes a git-ignored .env.
+# WARNING: `docker compose down -v` deletes the named volume and ALL local API Arena data.
+# Apple Silicon: Microsoft does not support this image on arm64; use a remote dev SQL Server (docs/DECISIONS.md ADR-003).
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:?Run scripts/dev-secrets first to create .env}
+    ports:
+      - "127.0.0.1:1433:1433" # bound to loopback only; never expose the DB port publicly
+    volumes:
+      - apiarena-sql:/var/opt/mssql
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$MSSQL_SA_PASSWORD\" -Q 'SELECT 1' -b -o /dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 20s
+
+volumes:
+  apiarena-sql:

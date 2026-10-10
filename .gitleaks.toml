@@ -1,0 +1,17 @@
+# gitleaks configuration: default rules + narrowly scoped, justified allow-list entries.
+# Every entry below is reviewed in docs/SECURITY_REVIEW.md ("Secret scan"). Do not add broad allow-lists.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Build output and dependencies (git-ignored, never committed); configuration-key false positives"
+paths = [
+  '''(^|/)node_modules/''',
+  '''(^|/)\.next/''',            # Next.js build output incl. per-build preview keys generated locally
+  '''(^|/)(bin|obj)/''',
+  '''(^|/)(test-results|playwright-report|blob-report)/''',
+  '''(^|/)\.local/''',           # development mail sink (git-ignored)
+]
+# "ApiArena:Auth:<Setting>" = "<number>" is a configuration key/value pair, not a credential.
+regexTarget = "line"
+regexes = ['''ApiArena:Auth:[A-Za-z0-9]+"\]\s*=\s*"\d+"''']

@@ -1,0 +1,42 @@
+# Secrets and local state — never commit
+.env
+.env.*
+!.env.example
+*.pfx
+*.key
+.local/
+secrets/
+
+# .NET
+bin/
+obj/
+*.user
+.vs/
+TestResults/
+*.trx
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+frontend/test-results/
+frontend/playwright-report/
+frontend/blob-report/
+*.tsbuildinfo
+next-env.d.ts
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+
+# Generated artifacts
+artifacts/
+*.log
+
+# Local AI-assistant working notes (kept on disk, not published)
+PROMPT_PACK.md
+CLAUDE.md
+/AGENTS.md
+docs/AGENT_RULES.md
+docs/HANDOFF.md

@@ -1,0 +1,100 @@
+# External DB only. No SQL port is published. Set files outside the repository.
+x-app: &app
+  restart: unless-stopped
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  tmpfs: [/tmp:rw,noexec,nosuid,size=64m]
+  cpus: 1.0
+  mem_limit: 512m
+  pids_limit: 128
+  environment: &env
+    APIARENA_CONFIG_FILE: /run/secrets/settings.json
+    ApiArena__Webhooks__Enabled: "false"
+    ApiArena__Webhooks__DevLocalReceiver__Enabled: "false"
+  volumes: &volumes
+    - ${APIARENA_SETTINGS_FILE:?Set absolute runtime settings file}:/run/secrets/settings.json:ro
+    - ${APIARENA_CERT_DIR:?Set absolute certificate directory}:/run/identity:ro
+    - ${APIARENA_CA_BUNDLE_FILE:?Set combined trusted CA bundle}:/etc/ssl/certs/ca-certificates.crt:ro
+  networks: [private]
+
+services:
+  api:
+    <<: *app
+    image: api-arena-api:${RELEASE_TAG:?Set release tag}
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.backend
+      args: {HOST_PROJECT: APIArena.Api}
+    networks:
+      private: {ipv4_address: 172.30.80.10}
+  simulator:
+    <<: *app
+    image: api-arena-simulator:${RELEASE_TAG:?Set release tag}
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.backend
+      args: {HOST_PROJECT: APIArena.Simulator}
+  worker:
+    <<: *app
+    image: api-arena-worker:${RELEASE_TAG:?Set release tag}
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.backend
+      args: {HOST_PROJECT: APIArena.Worker}
+    environment:
+      <<: *env
+      APIARENA_WORKER_HEARTBEAT: /tmp/worker-heartbeat
+  frontend:
+    <<: *app
+    image: api-arena-frontend:${RELEASE_TAG:?Set release tag}
+    build: {context: .., dockerfile: infra/Dockerfile.frontend}
+    environment: {NODE_ENV: production, NEXT_TELEMETRY_DISABLED: "1"}
+    volumes: []
+    depends_on:
+      api: {condition: service_healthy}
+  proxy:
+    image: ${CADDY_IMAGE:-caddy:2.11.7-alpine}
+    user: "1000:1000"
+    restart: unless-stopped
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    cpus: 0.5
+    mem_limit: 256m
+    pids_limit: 128
+    ports: ["80:8080", "443:8443"]
+    environment:
+      CONTROL_HOST: ${CONTROL_HOST:?Set control hostname}
+      SIMULATOR_HOST: ${SIMULATOR_HOST:?Set distinct simulator hostname}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ${APIARENA_CADDY_DATA_DIR:?Set writable UID 1000 data directory}:/data
+      - ${APIARENA_CADDY_CONFIG_DIR:?Set writable UID 1000 config directory}:/config
+    networks:
+      edge: {}
+      private: {ipv4_address: 172.30.80.2}
+    depends_on: [frontend, simulator]
+    healthcheck:
+      test: [CMD, wget, -q, -O, /dev/null, http://127.0.0.1:8090/health/live]
+      interval: 15s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+  migrate:
+    <<: *app
+    profiles: [migration]
+    image: api-arena-api:${RELEASE_TAG:?Set release tag}
+    restart: "no"
+    command: [--migrate]
+    healthcheck: {disable: true}
+    volumes:
+      - ${APIARENA_MIGRATION_SETTINGS_FILE:?Set separate DDL-role settings file}:/run/secrets/settings.json:ro
+      - ${APIARENA_CERT_DIR:?Set absolute certificate directory}:/run/identity:ro
+      - ${APIARENA_CA_BUNDLE_FILE:?Set combined trusted CA bundle}:/etc/ssl/certs/ca-certificates.crt:ro
+
+networks:
+  private:
+    external: true
+    name: ${APIARENA_PRIVATE_NETWORK:?Set precreated internal DB/SMTP network with subnet 172.30.80.0/24}
+  edge: {}

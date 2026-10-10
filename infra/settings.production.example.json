@@ -1,0 +1,17 @@
+{
+  "ConnectionStrings": {"ApiArena": "Server=SQL_PRIVATE_DNS;Database=ApiArena;User Id=RUNTIME_DML_USER;Password=SET_IN_SECRET_STORE;Encrypt=Strict;TrustServerCertificate=false"},
+  "ApiArena": {
+    "Urls": {
+      "FrontendBaseUrl": "https://control.example.com",
+      "SimulatorPublicBaseUrl": "https://sim.example.com",
+      "TrustedProxies": ["172.30.80.2"]
+    },
+    "DataProtection": {
+      "CertificatePath": "/run/identity/current.pfx",
+      "CertificatePassword": "SET_IN_SECRET_STORE",
+      "PreviousCertificatePaths": []
+    },
+    "Email": {"Mode": "Smtp", "From": "SET_VERIFIED_SENDER", "SmtpHost": "SMTP_PRIVATE_RELAY", "SmtpPort": 587, "SmtpUsername": "SET_IN_SECRET_STORE", "SmtpPassword": "SET_IN_SECRET_STORE"},
+    "Webhooks": {"Enabled": false, "DevLocalReceiver": {"Enabled": false}}
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "loopback Kestrel \u002B real SQL; test process includes API/simulator/client; SQL CPU/RAM excluded",
+  "activeRuns": 3,
+  "inboundRequests": 63,
+  "inboundConcurrency": 7,
+  "pollingRequests": 12,
+  "pollingConcurrency": 3,
+  "observationWrites": 63,
+  "eventWrites": 135,
+  "delayMs": 3000,
+  "elapsedSeconds": 3.1674773,
+  "cpuSeconds": 0.96875,
+  "cpuPercentOfOneCore": 30.58427601043897,
+  "peakTestProcessWorkingSetMiB": 179.07421875,
+  "immediateRequestP95Ms": 126.3687,
+  "pollingP95Ms": 25.8077,
+  "workerJobs": 20,
+  "duplicateExecutions": 0,
+  "initialQueueLagMs": 1000,
+  "queueDrainMs": 282.378,
+  "note": "Synthetic bounded sample, not production capacity; stream not applicable (polling only)."
+}

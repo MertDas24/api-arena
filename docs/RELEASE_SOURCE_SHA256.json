@@ -1,0 +1,866 @@
+﻿[
+    {
+        "path":  ".dockerignore",
+        "sha256":  "2a351166c87496bbe45365cedc27179527b6963d5e4922de15b4bf4b43e184a7"
+    },
+    {
+        "path":  ".env.example",
+        "sha256":  "260530878732dab465010340afbbd8c377b24b20c99b984353d0ec19f6ca4c67"
+    },
+    {
+        "path":  "backend/APIArena.sln",
+        "sha256":  "2d56c0301c6e340902d9425e74c20f5e0c242ee61141aaa8fed6dde338aed81f"
+    },
+    {
+        "path":  "backend/Directory.Build.props",
+        "sha256":  "bc96210aec68b5adaffe5527a65067f72a43b8eaa18a297c96e2847579c3f1f2"
+    },
+    {
+        "path":  "backend/Directory.Packages.props",
+        "sha256":  "bd90505808a12063d7748bce853d256bab7edb0b53295188768eb3ed876a0d63"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/APIArena.Api.csproj",
+        "sha256":  "0d974fafee6be8d7a78db8f6a7ff0823114a1eba79eea2b86f2e923a4454d46f"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/appsettings.Development.json",
+        "sha256":  "a128289ca582bc44006c59981f25f32739588eded85c64cc1ce4c3abdd22ceb8"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/appsettings.json",
+        "sha256":  "d3ccd565e88b46f0d53e367fd28e51345b06e0e77ea8bfbcdbdfa25f7d44c8e2"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/ControlPlane.cs",
+        "sha256":  "3fe13c0698b13457e2e084c1d4ada768c7884b8f7fef6adeaf195cfe9a0c299f"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/DemoSeed.cs",
+        "sha256":  "092dba0bc78c790475a5da5b07ad8aea42c253c6f372d3e0201de8b0b72634f7"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Endpoints/AccountEndpoints.cs",
+        "sha256":  "d339780d3e34fbdd4389474e709ec77be913380791220cf2624f7dd8752c1125"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Endpoints/AuthEndpoints.cs",
+        "sha256":  "3f538330badbd8b7581358da6a62d68ff52ad2b8c6d92485ca5d917862b478cf"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Endpoints/CustomScenarioEndpoints.cs",
+        "sha256":  "843d522e9b0751a139377e0f23a2d7485f1f87df42d13dc9774ba70e5fb36bed"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Endpoints/DevMailboxEndpoints.cs",
+        "sha256":  "028fc85436ecf48d8db12e4291011b13cbfac8120e0d71d635c10d67245766df"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Endpoints/DomainEndpoints.cs",
+        "sha256":  "6ba4c9c4a562ced888388627ef9d0d119e4d7de4198aa0fa22f9431825c04836"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Endpoints/ProjectEndpoints.cs",
+        "sha256":  "d8a0246333205c3a3ad097aa7d936177f50d2980bd05688887e7fe6156fe116a"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Endpoints/RunEndpoints.cs",
+        "sha256":  "5ea2c6b83c769099f71bbe67c182b842a1f1f984ae88a56789a7c46cd4acb23f"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Endpoints/WebhookEndpoints.cs",
+        "sha256":  "7191e1c6cbe530cd9243d532729cf66c9071bd07dec11cc683e16eef48957b20"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Program.cs",
+        "sha256":  "7fd65da1ab5b3155ef27ff88285653bd30f82c3061f8f3a84ede7c923ddacf77"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Properties/launchSettings.json",
+        "sha256":  "991be27083407649179e3a9d0e086d7e296f148715edfdd1f3c8bddb18bc3f28"
+    },
+    {
+        "path":  "backend/src/APIArena.Api/Security/CsrfMiddleware.cs",
+        "sha256":  "bbf5f0bebae1f8b60a8dfa0211e076b1689c218ffb9c16e3fa942a606b44a69f"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Abstractions/IAppDbContext.cs",
+        "sha256":  "022f090099bf5245a589fba61aad52a410fb18630d4a7c75622ca12b4a6cb048"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Abstractions/IEmailSender.cs",
+        "sha256":  "e52402e2cb8e274bbdbcbf7fd9aa7733bc3b3007768c78a15800045c5ad823ab"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Abstractions/IUserDirectory.cs",
+        "sha256":  "01d9d3a9dc2ee79969fdce3afd8f5abd2489cfe49a9d4b51b1ba4c2d99a03960"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Access/AccessScope.cs",
+        "sha256":  "5282a6a2272a52a11a00e9fa2eec79a757b5382079dbe3612c2f01e91ba4c374"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/APIArena.Application.csproj",
+        "sha256":  "8499cf8261afd90f5500041aa23a4e54f7ca93f81f37cbd3de1f9956ce602c5d"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/ApplicationServices.cs",
+        "sha256":  "30d9800be0ec0f8e280ef0819dc3b3827a5a32292aa4e03511946191cc7b2145"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Common/AppErrors.cs",
+        "sha256":  "ffd8db62fed075d8f7164c85b19fab2a02afedacd0d0d9fe9e06f3791c52d4ac"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Common/Paging.cs",
+        "sha256":  "1d1b0e0cfde0547e024b791aee4da9e32a5068d2dd9770061791ee6bd442eda3"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Options/ApiArenaOptions.cs",
+        "sha256":  "5bb651811bb928eb222bf9441046c14f6242812fc0b7841a371a491751965423"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Options/WebhookOptions.cs",
+        "sha256":  "fa1c4ae2281f015f4cd3f7f441e804e05a2b8d302e2f2bb0f02506dfb7ef4c47"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Projects/ProjectService.cs",
+        "sha256":  "1858cafc83444049a02ea93a1cd22ff6663dbbe20ff2fb75a3ce0ad74e7034fb"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Reports/ReportModels.cs",
+        "sha256":  "f7b14be8b6c49c4014b3d4a4e74f2f0c79a51b61fadefc52708cc43fd6977770"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Reports/ReportService.cs",
+        "sha256":  "421a15013369525458d9fae43db9ba051db9bac4a7b79feee09e6bdd9335ca88"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Reports/RunFinalizer.cs",
+        "sha256":  "beba83d9740b2c0e0223ad3d038800cdbf3b9722bfe4f9b9a2433b16144b6159"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Runs/DashboardService.cs",
+        "sha256":  "ccfc5f3184c10b5ef1cde98b8aa9b7249df424ce70f327288833ab2da4db78da"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Runs/ObservationService.cs",
+        "sha256":  "9dbf0620b643a3552dfd714fe7a11076a8d1038f27d1d1fa8c2a8b5117dabb19"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Runs/RunLifecycle.cs",
+        "sha256":  "6044a0d71c4dc82978e1ebbbe098ae045fe193a53a2d09b2791f0d834737e38a"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Runs/RunService.cs",
+        "sha256":  "3fc99acb0f15c0817a5892eb37be27e54b3bdf8e62e23c4cbf461add65be1799"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Scenarios/CustomScenarioService.cs",
+        "sha256":  "138acfecbc3d955be8422e312274f90f3456e8aacf90681546e8c944d3ad9e94"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Scenarios/ScenarioCatalog.cs",
+        "sha256":  "43feec9d828706aff052d1755fa596a39f67d6218b24ddfc52b0750666db8b25"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Simulation/SimulationService.cs",
+        "sha256":  "189ad06fe2053814c3131732b61ef2518a874fa6ad8075cfec5df700514f5642"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Webhooks/WebhookDeletionParticipant.cs",
+        "sha256":  "44aaf1d10cc254a35dd008df93ad4e76e29e640a7e7b87c40348416edd4784d1"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Webhooks/WebhookRunPlanner.cs",
+        "sha256":  "7e79a068b901d37af73c861a314b498b4bf6ed62271cb9925b329ec63304b0b0"
+    },
+    {
+        "path":  "backend/src/APIArena.Application/Webhooks/WebhookTargetService.cs",
+        "sha256":  "41167dc21218c6786ae5dfac0cf309c3da1b45378add40242be9cfcfbe0569fd"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/APIArena.Domain.csproj",
+        "sha256":  "7728cba89a3be8a2ed4c9662da4332fa671054c0a1b5722bda717c3bac5ebc00"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Entities/CoreEntities.cs",
+        "sha256":  "09bee55103f646ccba2d5f3ca5923ed62cc2f5776b59ce498c546783835cfd2a"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Entities/V1Entities.cs",
+        "sha256":  "2f7d41fa62db5a7a76ebe0dcee66d54f9b32557bc538ee1cb30dca24cd7db6e4"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Evaluation/Evaluator.cs",
+        "sha256":  "e8c39bace5411860527acb09609952ae25a2dbc341dd95220727938ba916ea45"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Evaluation/WebhookChecks.cs",
+        "sha256":  "07cccd58191d63386e10a195ece4e128b7c5909d1f4e16993544735bba6115b7"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Outbound/NetworkPolicy.cs",
+        "sha256":  "eb56972a790ea5bd821a29739a5d8ee9e9d99640bbcbcf7b5236efa7b6370384"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Outbound/WebhookSignature.cs",
+        "sha256":  "36ac7bb5fd1a68a27c45744de3263937b33e743d1964bbd6f21c4ff2907b02ce"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Privacy/Masking.cs",
+        "sha256":  "70f927242a297021a9d63ee76d642dc8e65ba4c8cdf0b9f930c7e5093df8fcd8"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Runs/RunRules.cs",
+        "sha256":  "b85d5415e021aef4cb782119f49187101ab07079b0b3cd2a29933f8a3ca67739"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Scenarios/CustomScenarioCompiler.cs",
+        "sha256":  "554479405e6681007aac9d2d66daddc90733330e9733ea18789601c6a7b1de5b"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Scenarios/ScenarioDefinitions.cs",
+        "sha256":  "567a197128d8f1cf2a5e20b7baf5010b22b8e54f258cbb7abf965f0b48183cc3"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Scenarios/ScenarioEngine.cs",
+        "sha256":  "16af58002ebe71eef78429caa4c8f234d5285d82aff2b24b43121aeb615f8044"
+    },
+    {
+        "path":  "backend/src/APIArena.Domain/Scenarios/WebhookDefinitions.cs",
+        "sha256":  "8ff38f48a87851f74def1f0e1512d5ab373876ca90076d43bbdaa057f267bbf0"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/APIArena.Infrastructure.csproj",
+        "sha256":  "4102545058033753ebb02118eebdf56a815f793e32c6c7e8fa1c6733e3b1db69"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/DependencyInjection.cs",
+        "sha256":  "7519e50b9af47a11f4d30864eb141f8d0e94074130b8a5ad2f3023dfcb7af822"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Email/EmailSenders.cs",
+        "sha256":  "380912f6a7377df1b3225794e7a471932090f62e746c1dd23538d4a60b20df1a"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Identity/AppUser.cs",
+        "sha256":  "961e0abb31332b731f472ba3985f5ef4009f1b4ae21788c686acbdab19e04ea3"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Identity/DbTicketStore.cs",
+        "sha256":  "66da9c1b416929814c924b55530938ece02b7b7abc0f1aabeb6b9263711a89d6"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Identity/IdentitySetup.cs",
+        "sha256":  "a75e6593abb559e83e4812003e8bd013292d65fd7bcc9f283a4d8570c808ba9c"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Identity/TimeAwareTokenProvider.cs",
+        "sha256":  "4622863276b4fcb08e3faf1c0fa82efc5af5a7781d931cd39828d132ef66eaa4"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Jobs/OutboxProcessor.cs",
+        "sha256":  "658f0233a5b17394eb642c67a9d96d6e61ae79373ad7b1fbac33491afbe34a04"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Jobs/WebhookHandlers.cs",
+        "sha256":  "de0cdabac1212d9b1bbc262fdac2f35b610cf4bda597061aedcb8a27def08f28"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Options/DeploymentConfiguration.cs",
+        "sha256":  "35207992bd1308cf4c794ef506e3e1f208168499ac7824a592f3cef69f3c40b9"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Options/ProductionConfigGuard.cs",
+        "sha256":  "b67bf11bd94eaf2de821608c95b8e294a7bd3bbc1c65522d31d9d63733f980df"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Outbound/OutboundServices.cs",
+        "sha256":  "1db68a26bbc3423025752f3d59f69ed5af144d8e21c39e5694ab505d3cb2d117"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Outbound/SafeHttpClient.cs",
+        "sha256":  "0c29408444f8e6433a368f4d35e705157239459795332b887d312a831885b19e"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Outbound/SecretProtector.cs",
+        "sha256":  "2e82bc7e3dc3e221e7fead01b2e96c43f8f0d8fc000b727f6cfec53a6a5444f5"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/AppDbContext.cs",
+        "sha256":  "5c0aae013a796b2f1d2a414d5ac013d126652a983c0c9290f550fefaa4011439"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/AppDbContext.Domain.cs",
+        "sha256":  "e73605aa0ba68ebb8f27c7f67f53b494c07f8b3da246b510f003c3ea0103fd2b"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/AppDbContext.V1.cs",
+        "sha256":  "4b8225f2b51f32493033b40b1961324882b501da3c3af0adf26401eb4e4cd8fe"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/DesignTimeDbContextFactory.cs",
+        "sha256":  "d7113b9ae7803025e03243f0775d293b136bbddf369a6835cb392ba5f24d2817"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/Migrations/20261007145107_Initial.cs",
+        "sha256":  "59111affae1d6f41ada2813e167f5e4125ac66f320360b7dc34702e93912f140"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/Migrations/20261007145107_Initial.Designer.cs",
+        "sha256":  "47a9e338e2f7bc01c34b26a91afaa5c3935bb036b3471c18f2e63c5fab129f28"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/Migrations/20261007151549_CoreModel.cs",
+        "sha256":  "e85d0254ecc660767ccd97a0dea507ec809ae5e72c9f994c3ddc25a832377815"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/Migrations/20261007151549_CoreModel.Designer.cs",
+        "sha256":  "36dce2ce9c8c8666d51c520a3f1e9a1999d9d09e68ed6f6fefd01589b8135d49"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/Migrations/20261007162157_V1WebhooksSharingAudit.cs",
+        "sha256":  "c6ce556e2c544d9d87c965c2c37677530cf160aeb79cdb39cf3520f4ae3d42e2"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/Migrations/20261007162157_V1WebhooksSharingAudit.Designer.cs",
+        "sha256":  "92399393b7d6478332b1feaee5b4f3397a351c9b182eaf78fb02d1dcc097211b"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+        "sha256":  "4f35b4f1fbed5bbf3a4c47d97bccfda77139d3b10e45df901c1420220a453df6"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Persistence/RunAtomics.cs",
+        "sha256":  "9c6965936be8c8091392528f63a51304cbbc5b7c298ab4b9f30f8660db5628dd"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Time/MonotonicUtcTimeProvider.cs",
+        "sha256":  "dbd9c0b099828b90bcd6aef67dd563b3cbde9fe6c1b84f0b3ddee6d950a383d5"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Web/HealthEndpoints.cs",
+        "sha256":  "3f88d1e829a0e8ecedb624d6738f76e8cf14f142039e1effe75884e3d1f8282c"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Web/SimulatorUrls.cs",
+        "sha256":  "dbe868873df8b90b8a7b8d20a6b83c36e084251ec6f51a71902f64f68d38564d"
+    },
+    {
+        "path":  "backend/src/APIArena.Infrastructure/Web/WebPipeline.cs",
+        "sha256":  "0ba4c065a64ce06e3bc6c8cc32cea49c66fe1fa17a789b0cab8d308205bc9eba"
+    },
+    {
+        "path":  "backend/src/APIArena.Simulator/APIArena.Simulator.csproj",
+        "sha256":  "b882e0d87c1cad2206730b5a4cf9c880681f0395964e382eb01f2fdfe8ea16c7"
+    },
+    {
+        "path":  "backend/src/APIArena.Simulator/appsettings.Development.json",
+        "sha256":  "a128289ca582bc44006c59981f25f32739588eded85c64cc1ce4c3abdd22ceb8"
+    },
+    {
+        "path":  "backend/src/APIArena.Simulator/appsettings.json",
+        "sha256":  "f83ce6a0faf5ddab5fc066fed7e19d39b3f8b1c7deffbbefeff46cb47ed41139"
+    },
+    {
+        "path":  "backend/src/APIArena.Simulator/Program.cs",
+        "sha256":  "f8932199adaa6580e6ea1f929938e3dea6ce62641d4c52428331c9e05693ade1"
+    },
+    {
+        "path":  "backend/src/APIArena.Simulator/Properties/launchSettings.json",
+        "sha256":  "8bd1c9fda4c47acc5eb19c04ab194856e9d1db0059f8670f469a45dca514843a"
+    },
+    {
+        "path":  "backend/src/APIArena.Simulator/SimulatorEndpoints.cs",
+        "sha256":  "33f53b2f077a2795f7f3e637a99de3b001a1483817d8f1db5f3eeeafc3ffb2e0"
+    },
+    {
+        "path":  "backend/src/APIArena.Worker/APIArena.Worker.csproj",
+        "sha256":  "a9de7a357d7297e22696fce99f24c7533ce4704069b096aab91419c6e549870b"
+    },
+    {
+        "path":  "backend/src/APIArena.Worker/appsettings.Development.json",
+        "sha256":  "a128289ca582bc44006c59981f25f32739588eded85c64cc1ce4c3abdd22ceb8"
+    },
+    {
+        "path":  "backend/src/APIArena.Worker/appsettings.json",
+        "sha256":  "d8baed842f46ee19d1147f5ce0db26f808f509e08a03f034c8149ebc7097712e"
+    },
+    {
+        "path":  "backend/src/APIArena.Worker/Program.cs",
+        "sha256":  "c1f57f892d2359b0473e3086e28a993def50fe05501aecd04fb313029d646e9b"
+    },
+    {
+        "path":  "backend/src/APIArena.Worker/Properties/launchSettings.json",
+        "sha256":  "e99c8c6fd96f9e6db1bd91d200c3edfba47ced1c39e185375b60e12f1920da0d"
+    },
+    {
+        "path":  "backend/src/APIArena.Worker/WorkerRegistration.cs",
+        "sha256":  "2fefc81298b15764ce8ecd6f75ffb1783eee72406ccaca21ccf461fa16093af6"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/APIArena.IntegrationTests.csproj",
+        "sha256":  "55ccc08b4cd38cf9cf00f7f6d3df245307c66231503da14693be797e7bfa62ee"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/HostCompositionTests.cs",
+        "sha256":  "9c0c1d05df58c3ebed52f1af1cf8a3e263bd24a9f223c9d474de703ae6c35963"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Infrastructure/Factories.cs",
+        "sha256":  "c217b81a9cbc2856951d4160d6f41fd98b24db4e9bd4252784ff5649da873ae3"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Infrastructure/OutboundFakes.cs",
+        "sha256":  "13ca6a967d6c96af5d9fd4baf4fdb5265e7f91f1d07432fbcb5c1dfddb780669"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Infrastructure/Scenarios.cs",
+        "sha256":  "86df4243329e4b43ded220aaac72892b597acff6e8382e8563c023e7340af38e"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Infrastructure/SqlDatabaseFixture.cs",
+        "sha256":  "8fb130423caae69c68ee6794047fe15b895d7d0cc6fb38b2f28d4f95956d4c70"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Infrastructure/UserSession.cs",
+        "sha256":  "683335b40468c7efccb45c2b1ff7a07237243901549e277c14b8135129296aee"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Infrastructure/WebhookHarness.cs",
+        "sha256":  "752ccfc6dfe7a4b1648b28c3ddfa5cda5ed1f5d5bd4ab063a4b0be810b417ff5"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage01_FoundationTests.cs",
+        "sha256":  "f00d1f6c4860a6448dafe370a86817bef9d3938cb984776d6eb7e1a0dbbb3941"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage02_AuthTests.cs",
+        "sha256":  "f5757e9ebbdf5bb54b23181297b09c1025f71c29ce3cd4d0e35bfdb6cfbbe155"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage03_ProjectTests.cs",
+        "sha256":  "aad31efbe4dbc8ca983cbb8d588ffbf26dbb02218e67d0f6b04c5d3fb977c5b6"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage04_RunLifecycleTests.cs",
+        "sha256":  "711e295f1eec31ac0f9a7633af78c6f4f73259f777fcc636302c9e3e9d2fcac1"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage05_SimulatorTests.cs",
+        "sha256":  "c226c44dac2676149210c4b27c2f0b167f6850c73221a2c58aa325584797286a"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage06_FeedTests.cs",
+        "sha256":  "beac7577acc4ebbdf9be4f66023a6309d66651c9290986d8a5ee817a2d75608b"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage07_08_ReportTests.cs",
+        "sha256":  "70356c19d1192a4653f2964fb72e4cc2897e7b349a06b3c2fa52670ff74a308f"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage09_ExampleClientTests.cs",
+        "sha256":  "f4307b18bd5bddd0746422f5b97eaaa942f7342991d9c26a8afb748683b8d6ca"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage11_SecurityTests.cs",
+        "sha256":  "18aab1434bb229d4adf6821c1a0a85e942c826aaaa117957b047919c38dab483"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage13_14_WebhookTests.cs",
+        "sha256":  "f3e6efe97bdc22f0bdc7fec2fb4d4d736f91ad9320861435d78bd177d588fb6b"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage13_SafeHttpClientTests.cs",
+        "sha256":  "8a02e6a7fc1fe6b8d81857bb288c450f2a41aae7b77911e25064697340c82351"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage15_CustomScenarioTests.cs",
+        "sha256":  "eb209b1c5b27dc84e10b24e4b0d1757462c37b850e92557f1d79984a9e8af7e5"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage16_AccountDeletionTests.cs",
+        "sha256":  "6513f7e9147e1b9f3f06b59223d31e7f1ebed495ab5036c6399b206fbe2e07f4"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage17_BoundedLoadTests.cs",
+        "sha256":  "5ee7291df8cb5fe56ed118f86b64126b921ae5bbdec452dbec48afe4e30ada94"
+    },
+    {
+        "path":  "backend/tests/APIArena.IntegrationTests/Stage17_ProxyTests.cs",
+        "sha256":  "7d667772dfe7ab32497b565c5af5f5b360c5a051907ec89fd12c97e3261b99a3"
+    },
+    {
+        "path":  "backend/tests/APIArena.UnitTests/APIArena.UnitTests.csproj",
+        "sha256":  "b0c0f6aff3cacf902c669f14ead6bde8cd88137dfc11addc42b082e4fc89b2cc"
+    },
+    {
+        "path":  "backend/tests/APIArena.UnitTests/EvaluatorTests.cs",
+        "sha256":  "9d53e98e656a5de0be0592bdabad7001b72983af5f10c86ecc27409e198032ed"
+    },
+    {
+        "path":  "backend/tests/APIArena.UnitTests/OutboundPolicyTests.cs",
+        "sha256":  "8c525112fbeccf7e8aafc0e8f36644e1366fd69ff60ee5b0c4a524688d559523"
+    },
+    {
+        "path":  "backend/tests/APIArena.UnitTests/ProductionConfigGuardTests.cs",
+        "sha256":  "ad7fc3e91517aee02d560186f3281d683735e74756e7533b98b8ac316fe80cda"
+    },
+    {
+        "path":  "frontend/AGENTS.md",
+        "sha256":  "063098f6cb31bb44c6f8fbea25b3876de7ee1e5f7d00a50dbab506f6415eb7f0"
+    },
+    {
+        "path":  "frontend/e2e/helpers.ts",
+        "sha256":  "cf94d6f470d25f83bf63ef562bc6096403c0bff306d0d3a26416c755cea7c67d"
+    },
+    {
+        "path":  "frontend/e2e/main-flow.spec.ts",
+        "sha256":  "52a4a95ffe7821c168b64d8a0c045695e0fcfc57ed3b7bd60892e6ceed77ec67"
+    },
+    {
+        "path":  "frontend/e2e/responsive-a11y.spec.ts",
+        "sha256":  "61e4f79197dcf5102be5103b91647d2402bf1e1cf66a9522afcab80399887406"
+    },
+    {
+        "path":  "frontend/eslint.config.mjs",
+        "sha256":  "89ff845df539995b22913fec3343dc901ecbacf014b681b9eb01f1e4632fc419"
+    },
+    {
+        "path":  "frontend/next.config.ts",
+        "sha256":  "a89ee6bf88d9b8efb287711cc390895831304a9866bd2a6f84194777d15376a7"
+    },
+    {
+        "path":  "frontend/package.json",
+        "sha256":  "52fcb609cd4130e64d30c9d5524857ba71784e5659e9a5b69784a4b784ed0ac4"
+    },
+    {
+        "path":  "frontend/package-lock.json",
+        "sha256":  "270a024a9c8c65ed68621b9cace9d212c9fd36cf0173681251614397d39a7755"
+    },
+    {
+        "path":  "frontend/playwright.config.ts",
+        "sha256":  "71c60d6b5ba1b2fb20fc3ecae7058b0a18a4a0e33a722de795e19f8e38853552"
+    },
+    {
+        "path":  "frontend/scripts/prepare-standalone.mjs",
+        "sha256":  "356e26e448c90828e48148cabcdda0d16cce750737e24d1a21cc21006077b4b1"
+    },
+    {
+        "path":  "frontend/src/app/account/page.tsx",
+        "sha256":  "53ff7a9ea1b3ae0c6e424fef10d2fc91d91a66ce89b14b7b18a9dd12459d541b"
+    },
+    {
+        "path":  "frontend/src/app/compare/page.tsx",
+        "sha256":  "650aa6f3ea153891618d33418919788dd299d6793b43461a0bb00e03a2d46ca7"
+    },
+    {
+        "path":  "frontend/src/app/dashboard/page.tsx",
+        "sha256":  "481f0f8d57c985eb071013283ffb47f6580bafb382b36a57a942a8cafecff9ce"
+    },
+    {
+        "path":  "frontend/src/app/dev/mailbox/page.tsx",
+        "sha256":  "af2d566b390af4e737bcb435c38e42256fd01ed05c234b0e777dd71ff0ded13b"
+    },
+    {
+        "path":  "frontend/src/app/favicon.ico",
+        "sha256":  "c28fdd2a4f31e2dc64f653962286da5c82a4cdfc518b242d32812c624e9a19a4"
+    },
+    {
+        "path":  "frontend/src/app/forgot-password/page.tsx",
+        "sha256":  "93f58a50addb483bc03a5c7b2a08bbc11b0ea1ba6242308206a21f23e4f3ff19"
+    },
+    {
+        "path":  "frontend/src/app/globals.css",
+        "sha256":  "3b71c1d5bc0600134d3b557b958f7a74d4285378df70e9314dcf1ad926ed2e8a"
+    },
+    {
+        "path":  "frontend/src/app/layout.tsx",
+        "sha256":  "432ec6fe35e487ed15aed5b2ad1f6844e8f51aba7812d1416e950ad9f2bbb39b"
+    },
+    {
+        "path":  "frontend/src/app/login/page.tsx",
+        "sha256":  "ad98c7593d5a87da11fef550acef6b99a509d09e95eb3b6f08898276d0dcaa23"
+    },
+    {
+        "path":  "frontend/src/app/page.tsx",
+        "sha256":  "0d35f537d609aae655bf054bb37d616a20b0f3569ac28111e3251af1ca7a1c91"
+    },
+    {
+        "path":  "frontend/src/app/projects/[id]/page.tsx",
+        "sha256":  "1181bc94edb952b4776d0ab67f958c7ce93bd105a014cce0ce885a3e60c2859b"
+    },
+    {
+        "path":  "frontend/src/app/projects/[id]/runs/new/page.tsx",
+        "sha256":  "28585f420fb022ba7fcb4f4fc8c94530698d314955e5a0ebba21fc2bd7a4cdea"
+    },
+    {
+        "path":  "frontend/src/app/projects/[id]/webhooks/page.tsx",
+        "sha256":  "e512afd66cf4834ab26bfec9de5c30e72bf87ac641e0ef1ade002654ff4de12b"
+    },
+    {
+        "path":  "frontend/src/app/projects/page.tsx",
+        "sha256":  "7fbdeb0acbe0c71fd87dea6e66f564872e6baebaf3aa9ad80bd5b39cadb3164d"
+    },
+    {
+        "path":  "frontend/src/app/register/page.tsx",
+        "sha256":  "14686ddaa071f06e364e6197b0e4a9816e583281c7b70857ce0518b2558ec5ce"
+    },
+    {
+        "path":  "frontend/src/app/reset-password/page.tsx",
+        "sha256":  "76797c5c2ce2ce0f0902306446b33d4bc83f937ebacadd4610321c85675bd8a8"
+    },
+    {
+        "path":  "frontend/src/app/runs/[id]/page.tsx",
+        "sha256":  "f11daab8bcc713dc4c52a2724019a396d4167d5b33091153df8ebbe65c69b13c"
+    },
+    {
+        "path":  "frontend/src/app/runs/[id]/report/page.tsx",
+        "sha256":  "60bfa3e1f4d44b72698b86f50ca484444323cf0bbc70fd03443850d88a411281"
+    },
+    {
+        "path":  "frontend/src/app/runs/[id]/webhook/page.tsx",
+        "sha256":  "480f632ba7314171e74801476ea3cb3ca7109a0c1789e8828b1f569d1cdd46b8"
+    },
+    {
+        "path":  "frontend/src/app/scenarios/[slug]/page.tsx",
+        "sha256":  "fe813ea0ea16c9aaf2c97bf2dee9fe9ea69623aa0115d141f891d8649fd99a36"
+    },
+    {
+        "path":  "frontend/src/app/scenarios/page.tsx",
+        "sha256":  "51e113decf7cbab944ad5e030328e4d6faef9a6d70e30263f22edf7e2a51cd3f"
+    },
+    {
+        "path":  "frontend/src/app/verify-email/page.tsx",
+        "sha256":  "fdefa913a53ffc8c99e0cd158e69b89e63b27d25a0aca36869f40f1d7dd99353"
+    },
+    {
+        "path":  "frontend/src/components/account-deletion.tsx",
+        "sha256":  "8de3724e27d7bea372799aa39de8edbb11a84f379d414bddc8f612bee79c00ea"
+    },
+    {
+        "path":  "frontend/src/components/app-header.tsx",
+        "sha256":  "83847a8d2585c13840f603aec9928569d5b0338c26411e53b46b31270072f74d"
+    },
+    {
+        "path":  "frontend/src/components/components.test.tsx",
+        "sha256":  "4a956ea50a5ae10106088b2c9dd1eba816be76b7e5aff331f3302743e0ffb037"
+    },
+    {
+        "path":  "frontend/src/components/confirm-dialog.tsx",
+        "sha256":  "81ac88cebca5e2f3eccad09d110c964396f94fc426e5feb5947b362d638df297"
+    },
+    {
+        "path":  "frontend/src/components/connection-snippets.tsx",
+        "sha256":  "419746dac5144ecae986f7806411db735419831e2862304c7366ca43f35c4da3"
+    },
+    {
+        "path":  "frontend/src/components/dev-mailbox-hint.tsx",
+        "sha256":  "1d30e5c2950d627c4ab3c712609a22e21b1d9e19c0095b0c196b98df2d0df4b0"
+    },
+    {
+        "path":  "frontend/src/components/health-badge.tsx",
+        "sha256":  "046ab57fd89ccd1669fa73abf9aaca2ebf303f32f7a9ccef3849b591b5c62d4f"
+    },
+    {
+        "path":  "frontend/src/components/next-step.tsx",
+        "sha256":  "f95cdbbcaeba42a1745a0f4e5e7f8c2b27d59554b86a02762702e71ece6cfb71"
+    },
+    {
+        "path":  "frontend/src/components/observation-detail.tsx",
+        "sha256":  "1eb3be53815ffe5fd2bceafd69efa10ddd268cd3f263126b5b5dfc0e13a87221"
+    },
+    {
+        "path":  "frontend/src/components/report-view.tsx",
+        "sha256":  "5d106e61b47bb33f3a1b40ae3961f76ddfd53ff20e8944dc4e01bc353cae4cfd"
+    },
+    {
+        "path":  "frontend/src/components/require-auth.tsx",
+        "sha256":  "c18f33716a25e944efae28015659edcd9a7c13d7c34e5cf8600463a702511aff"
+    },
+    {
+        "path":  "frontend/src/components/scenario-details.tsx",
+        "sha256":  "6b7cf81260ee4f9c71749a641a2cefb1aa6e974d75c38bcd97b5b770e9c9ed9b"
+    },
+    {
+        "path":  "frontend/src/components/secret-once.tsx",
+        "sha256":  "925068c3eaac780087f81e71b70937f03f981c15c3f07dc34e41a58556ae9c5f"
+    },
+    {
+        "path":  "frontend/src/components/status.tsx",
+        "sha256":  "95a56fa3c22849179d298e3ea8959a2122b420cbd0b851e6c1fd0eb57de7f83f"
+    },
+    {
+        "path":  "frontend/src/components/ui.tsx",
+        "sha256":  "9fd2a05d7eafcd12129c13be09c87774a607c55668fb2923550af5fd6ce52526"
+    },
+    {
+        "path":  "frontend/src/lib/api.test.ts",
+        "sha256":  "d8ffdf49c47b26db802ddd7a79900deb801dcc9616d5381775592a338455d241"
+    },
+    {
+        "path":  "frontend/src/lib/api.ts",
+        "sha256":  "55a7d5b9eae2093ed9e6eeff35c1d9be59d4f61cfb9eaf24925f40bf52bffe04"
+    },
+    {
+        "path":  "frontend/src/lib/feed.test.ts",
+        "sha256":  "437ec7d5206e0e07e314d3d44387fa880202a131978d4751ceff8e239c2df926"
+    },
+    {
+        "path":  "frontend/src/lib/feed.ts",
+        "sha256":  "d3a8312ba59afb926cf0e3b5bb0c3591fd7dd8dbca6da10a94dd098dad377a3f"
+    },
+    {
+        "path":  "frontend/src/lib/format.ts",
+        "sha256":  "679545062ed574c606cc2c91cd243138339880e30a819762b0b913984d5a730e"
+    },
+    {
+        "path":  "frontend/src/lib/i18n/tr.ts",
+        "sha256":  "b2210a33adedc699ecb17c65fb8b449b4d780343c160c2cd1c78c2780945433c"
+    },
+    {
+        "path":  "frontend/src/lib/session.tsx",
+        "sha256":  "5384320f19b26f7f17c69a1d053136d3f81bfc35f789ac85377bd04d9ad4f3f8"
+    },
+    {
+        "path":  "frontend/src/lib/types.ts",
+        "sha256":  "987403c61d921090fa6485d8921e016a3add89f4c5985f9f32d954422dc976bd"
+    },
+    {
+        "path":  "frontend/src/lib/url.test.ts",
+        "sha256":  "1ea70d5b9eb898541b737fdf0a7ab0a25c22e64a02a0261feaacc2ffe2524dfe"
+    },
+    {
+        "path":  "frontend/src/lib/url.ts",
+        "sha256":  "06a90d4a79afdec1f996f9aa782f46020f8a9ef7463ab69eb25520afe15835e6"
+    },
+    {
+        "path":  "frontend/src/lib/use-api.ts",
+        "sha256":  "49ea78826c4eb7aeb60efb147080b57d4e2a84eeef369a44dac230e43ba72369"
+    },
+    {
+        "path":  "frontend/src/lib/use-live-feed.ts",
+        "sha256":  "b573e80bd6083c52cd6be7ff6206bd3277572f2524483bed0cf45acccf78e9ac"
+    },
+    {
+        "path":  "frontend/src/lib/use-unsaved.ts",
+        "sha256":  "6f18e600c7598d0abb08c368b4fabfa3284aa6076be1bd2a56c9dbb63b0ac8d5"
+    },
+    {
+        "path":  "frontend/src/lib/webhook-types.ts",
+        "sha256":  "c1b820aaf29453f681b4264d54430bef048e7ad8ad5ffd9ae323be22e76cdc40"
+    },
+    {
+        "path":  "frontend/src/proxy.ts",
+        "sha256":  "f78cbcaba2f5b9b7ace01edacc99129bf159fae77333c64405b240e8ab864fbe"
+    },
+    {
+        "path":  "frontend/tsconfig.json",
+        "sha256":  "5c51df4c59f4510d8c7dadf07a5c32132228826a3b331da5e286207b4df7ef9c"
+    },
+    {
+        "path":  "frontend/vitest.config.ts",
+        "sha256":  "3e0519fe1da79a1f22e214243492838cb52424ae6257ec15eace309a2309c4fd"
+    },
+    {
+        "path":  "frontend/vitest.setup.ts",
+        "sha256":  "a1d4d57aca98e449e02f6c9e3f47f6d02c942182876f42f5de6e3f1a4d525db8"
+    },
+    {
+        "path":  "global.json",
+        "sha256":  "884c3d68b436980197e5c5871b6be07dc75b894b2a9e210f70a73468e9f9bd8e"
+    },
+    {
+        "path":  "infra/Caddyfile",
+        "sha256":  "1bac5a3454e79b7d5967f8ac16e87e52484612e3203a9d96b50ff3437f083a0f"
+    },
+    {
+        "path":  "infra/compose.production.yml",
+        "sha256":  "e314ff656ffe8acb67a017bc32a84f26f1949617313ab91307ae9f72086c0603"
+    },
+    {
+        "path":  "infra/Dockerfile.backend",
+        "sha256":  "5c78e865ef6ed6ad2f550c4bbe0243b85a95a1d286a7fe906cf53bd6ede97bd8"
+    },
+    {
+        "path":  "infra/Dockerfile.frontend",
+        "sha256":  "180f187000f18e67ab6a12b5b03783ad6d0c38e3f9a2867c7ee8c154168d0ef7"
+    },
+    {
+        "path":  "infra/health.sh",
+        "sha256":  "1ec1d04b5272997a5a77ad261737bf907e7e40d01f794051bbe895312e3393b4"
+    },
+    {
+        "path":  "infra/settings.production.example.json",
+        "sha256":  "1464da8ea50a1ace5a1976d2765724d384274da12729ba945fcdb6f711795072"
+    },
+    {
+        "path":  "LICENSE",
+        "sha256":  "9ad319441dee6d006e622c3394ed914d78d7ae11dbc055e15ad75294a163235a"
+    },
+    {
+        "path":  "scripts/ci-sql.sh",
+        "sha256":  "272f4feb0a7f8a178c0427a6a16084d284629232a326e289159267c678ceb16b"
+    },
+    {
+        "path":  "scripts/db-migrate.ps1",
+        "sha256":  "403b64602f91777da1013348ad27e64d07ca5b29ef9650f1ba90912e13a49d65"
+    },
+    {
+        "path":  "scripts/db-migrate.sh",
+        "sha256":  "5d176f690ff59bb725b243c06a7fbb7061e8cfa32f9815364eb97a3e258a6da0"
+    },
+    {
+        "path":  "scripts/demo.ps1",
+        "sha256":  "296612b454e92680874cf5235f9044dc65755cf7c444816699b1ba8695f53766"
+    },
+    {
+        "path":  "scripts/dev.ps1",
+        "sha256":  "28662945a615f5b573703463777b382560113cceb15ff822a9a920a9bd20faa3"
+    },
+    {
+        "path":  "scripts/dev.sh",
+        "sha256":  "83373384015373ab1594f2d8a7eec5427aa002396f3dc5a9a424a7141248545a"
+    },
+    {
+        "path":  "scripts/dev-secrets.ps1",
+        "sha256":  "02ae0f926b617ce8ca7c4874a67a37e91a7f0240f5571842912e07b677505d62"
+    },
+    {
+        "path":  "scripts/dev-secrets.sh",
+        "sha256":  "0193cce4028a5072ee839cc9882d95086c0699b76f5deafd72f9845308b801c6"
+    },
+    {
+        "path":  "scripts/e2e.ps1",
+        "sha256":  "221d322ac52926e7f9571a04be487fe9655932a60ec34144bb68bf5eec0b726f"
+    },
+    {
+        "path":  "scripts/e2e.sh",
+        "sha256":  "3d2a61d72a7ef96fa5872704d4ee435ed833a959b48d6f157d8b3bb2c9268628"
+    },
+    {
+        "path":  "scripts/load-test.ps1",
+        "sha256":  "b98b8ae75ca245720c5c1f2ee5118ab803623d525e5af905d20a377eca5fa0f6"
+    },
+    {
+        "path":  "scripts/migration-job-smoke.ps1",
+        "sha256":  "8cf6ede5357aec4475d5345714175d54e84b88b2fce31f652ac7980bcaa28f44"
+    },
+    {
+        "path":  "scripts/restore-drill.ps1",
+        "sha256":  "2a57b373c1d7ec7e9fcb1d146a9766b08fca3246d085fcb8e19955030c495c54"
+    },
+    {
+        "path":  "scripts/security-scan.sh",
+        "sha256":  "609d255da8c59af198265f5e2d9a81aa78eb62e5fb0f60dcd982225375fcaed0"
+    },
+    {
+        "path":  "scripts/test.ps1",
+        "sha256":  "69858af0b7f1406dc88387cf2932481740c8df9756b662df4b540554bd574d60"
+    },
+    {
+        "path":  "scripts/test.sh",
+        "sha256":  "79ec741a29702dccf725e74a9830bde0cb1891509448f4ce88700c54810061f4"
+    }
+]

@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/*
+ * Palette v3 (ADR-036 rev.): vivid primary colours at the owner's request — blue (primary actions/links),
+ * sun yellow (secondary actions, highlights) and flame red (danger/errors) on a white background (rev. 2026-10-10:
+ * owner asked for a white page and neutral blue-grey table fills), with a deep-navy dark theme. Token names are kept
+ * (ink = surfaces/borders, fog = text) so components barely changed.
+ * Contrast targets: body text ≥ 7:1, muted and status text ≥ 4.5:1, white on blue ≥ 5:1, dark text on yellow ≥ 10:1
+ * (checked by axe in both themes). Yellow is never used for text on light backgrounds.
+ */
+:root {
+  --ink-950: #ffffff; /* page background (white) */
+  --ink-900: #ffffff; /* header, inputs */
+  --ink-850: #ffffff; /* cards */
+  --ink-800: #eef2f9; /* table headers, subtle fills (pale blue-grey) */
+  --ink-700: #dbe5f7; /* hover, active nav */
+  --ink-600: #dde3ec; /* borders */
+  --ink-500: #b6c0cf; /* strong borders */
+  --fog-100: #0f172a; /* primary text */
+  --fog-200: #1e293b;
+  --fog-300: #334155;
+  --muted: #57534e;
+  --accent-500: #2563eb; /* blue buttons (white text 5.2:1) */
+  --accent-400: #1d4ed8; /* hover */
+  --accent-300: #1d4ed8; /* links / accent text */
+  --sun: #facc15; /* yellow surfaces (dark text on top) */
+  --sun-hover: #eab308;
+  --on-sun: #1c1917;
+  --flame: #dc2626; /* red surfaces (white text on top) */
+  --flame-hover: #b91c1c;
+  --info: #1d4ed8;
+  --ok: #15803d;
+  --bad: #b91c1c;
+  --warn: #a16207;
+  --unknown: #57534e;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink-950: #0a1024;
+    --ink-900: #0f1730;
+    --ink-850: #121b38;
+    --ink-800: #182346;
+    --ink-700: #213060;
+    --ink-600: #2c3c70;
+    --ink-500: #44558c;
+    --fog-100: #f8fafc;
+    --fog-200: #e2e8f0;
+    --fog-300: #c3cde0;
+    --muted: #a3afc8;
+    --accent-500: #2563eb;
+    --accent-400: #1d4ed8;
+    --accent-300: #93c5fd;
+    --sun: #facc15;
+    --sun-hover: #fde047;
+    --on-sun: #1c1917;
+    --flame: #dc2626;
+    --flame-hover: #ef4444;
+    --info: #93c5fd;
+    --ok: #4ade80;
+    --bad: #fca5a5;
+    --warn: #fde047;
+    --unknown: #a3afc8;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-ink-950: var(--ink-950);
+  --color-ink-900: var(--ink-900);
+  --color-ink-850: var(--ink-850);
+  --color-ink-800: var(--ink-800);
+  --color-ink-700: var(--ink-700);
+  --color-ink-600: var(--ink-600);
+  --color-ink-500: var(--ink-500);
+  --color-fog-300: var(--fog-300);
+  --color-fog-200: var(--fog-200);
+  --color-fog-100: var(--fog-100);
+  --color-muted: var(--muted);
+  --color-accent-500: var(--accent-500);
+  --color-accent-400: var(--accent-400);
+  --color-accent-300: var(--accent-300);
+  --color-sun: var(--sun);
+  --color-sun-hover: var(--sun-hover);
+  --color-on-sun: var(--on-sun);
+  --color-flame: var(--flame);
+  --color-flame-hover: var(--flame-hover);
+  --color-sky-accent: var(--info);
+  --color-ok: var(--ok);
+  --color-bad: var(--bad);
+  --color-warn: var(--warn);
+  --color-unknown: var(--unknown);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "Cascadia Code", Menlo, Consolas, monospace;
+}
+
+body {
+  background: var(--ink-950);
+  color: var(--fog-100);
+  font-family: var(--font-sans);
+}
+
+/* Decorative blue / yellow / red stripe under the header (brand cue only, carries no meaning). */
+.brand-stripe {
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-500) 0 33.3%, var(--sun) 33.3% 66.6%, var(--flame) 66.6% 100%);
+}
+
+::selection {
+  background: color-mix(in oklab, var(--sun) 55%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-300);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
