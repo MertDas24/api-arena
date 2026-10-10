@@ -1,6 +1,6 @@
 # Portföy v1 yayın kapısı — 2026-10-07
 
-**Karar: Blocked (dış erişim).** Çekirdek MVP ve portföy v1 kod/test kapıları (15–16 dahil) yerelde geçti; kalan kapılar hosting/Docker/TLS/remote CI/GitHub reporting/egress/izleme alıcısı erişimine bağlı. Production dosyaları hazırlandı, container/TLS/hosting yolu çalıştırılmadı. Public deployment, repository push ve ticari aşamalar yapılmadı.
+**Karar: Blocked (dış erişim).** Çekirdek MVP ve portföy v1 kod/test kapıları (15–16 dahil) yerelde geçti; kalan kapılar hosting/Docker/TLS/egress/izleme alıcısı erişimine bağlı. Production dosyaları hazırlandı, container/TLS/hosting yolu çalıştırılmadı. Public deployment, repository push ve ticari aşamalar yapılmadı.
 
 `passed`: belirtilen kapsamda gerçek kanıt; `blocked`: eksik kod/altyapı/erişim; `not-applicable`: seçilmeyen kapsam, gerekçesiyle. Production doğrulaması yerel testlerden çıkarılmaz. Ayrıntılı requirement→test eşlemesi `ACCEPTANCE.md`, exact komutlar `TEST_RESULTS.md`.
 
@@ -36,10 +36,10 @@
 | Container/config/TLS/private DB, OPS-08 | blocked | Non-root/minimal multi-stage/resource/health/read-only config var; YAML syntax/static checks geçti. Docker yok: build/pull/runtime/CA/TLS/health/container scan doğrulanmadı |
 | Sınırlı yerel load, OPS-09 | passed | 3 run, 63 inbound, 12 polling, 20 jobs/2 processors; CPU/RAM/p95/write/fixture lag ölçümü `LOAD_SAMPLE.json`; SQL CPU/RAM ve gerçek hosting kapasitesi ölçülmedi |
 | Streaming load | not-applicable | Ürün polling kullanır; SSE/WebSocket uygulanmadı |
-| Remote CI, OPS-07 | blocked | Workflow mevcut; remote/commit/push yok, GitHub koşusu doğrulanmadı |
+| Remote CI, OPS-07 | passed | GitHub Actions 2026-10-10: security, backend (SQL Server), frontend, Playwright E2E işleri yeşil (https://github.com/MertDas24/api-arena/actions/runs/38044037072) |
 | README/screenshot/demo/docs, DOC-01…05 | passed | English ana + Türkçe, gerçek synthetic E2E screenshots, PORTFOLIO/MERT_ARCHITECTURE/deploy/rollback/load docs. Docker quickstart kapsamı doğrulanmadı |
 | License | passed | Mert 2026-10-07'de MIT seçti; LICENSE eklendi, ADR-031 |
-| Responsible reporting | blocked | GitHub private vulnerability reporting seçildi; hosted repository/kanal etkinleştirmesi/bildirim testi yok |
+| Responsible reporting | passed | GitHub private vulnerability reporting etkin (API: enabled=true, 2026-10-10); bildirim akışı uçtan uca denenmedi |
 | Public deployment/smoke | blocked | Hosting/domain/SMTP/cert/secret/account erişimi ve dış yayın yetkisi yok |
 | Abonelik/gerçek payment dedup | not-applicable | Ticari 18–19 seçilmedi; test edilen payment event'ler synthetic örnek alıcıya aittir |
 
@@ -50,7 +50,7 @@ Release kod/config/runbook taslağı, MIT, secret dış mount, TLS proxy ve host
 1. Docker fresh setup, image build/scan/digest kaydı, production cert/CA/secret mount'ları, gerçek TLS ve cookie izolasyonu smoke (Docker/hosting yok).
 2. Metrik exporter + izleme alıcısı + bildirim kanalı (kod tarafı hazır, alıcı yok).
 3. Webhook açık durumda UI'nin tarayıcı E2E'si (backend akışı uçtan uca testli; E2E sunucuları flag kapalı çalışır).
-4. Remote CI koşusu ve git geçmişi secret taraması (commit/remote yok).
+4. ~~Remote CI koşusu ve git geçmişi secret taraması~~ — 2026-10-10 tamamlandı (CI yeşil; `gitleaks git` geçmiş: no leaks).
 
 ## Kullanıcıdan/ortamdan gerekiyor
 - Hosting hedefi + iki ayrı DNS hostu + public yayın yetkisi (bu tur push/yayın yapmadı).

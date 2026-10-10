@@ -61,7 +61,7 @@ API teslim planını `WebhookDeliveryAttempts` + `OutboxJobs` olarak yazar → W
 Tüm URL/port/limitler `appsettings*.json` + ortam değişkenleri (`ApiArena__…`). Production'da: `TrustServerCertificate=true` yasak, `Simulator:PublicBaseUrl` localhost olamaz, SMTP ayarları zorunlu, webhook flag açıksa egress beyanı zorunlu (bkz. `OptionsValidation`).
 
 ## 5. Gözlemlenebilirlik
-Yapılandırılmış log + `X-Correlation-ID`; `System.Diagnostics.Metrics` meter/exporter henüz uygulanmadı (OPS-05). Log'a body, run-key, cookie, token yazılmaz. Worker production heartbeat yalnız başarılı DB expiry sweep'ini gösterir; delivery queue metriği değildir.
+Yapılandırılmış log + `X-Correlation-ID`; `System.Diagnostics.Metrics` ile `APIArena` meter (düşük kardinaliteli sayaç/gauge'lar) uygulandı; exporter ve izleme alıcısı henüz bağlı değil (OPS-05). Log'a body, run-key, cookie, token yazılmaz. Worker production heartbeat yalnız başarılı DB expiry sweep'ini gösterir; delivery queue metriği değildir.
 
 ## 6. Production paketi
 `infra/compose.production.yml`: private DB/SMTP ağı, non-root/read-only/resource-limited hostlar, Caddy TLS farklı control/simulator hostları. `--migrate` operatörün ayrı DDL-role job'udur. `APIARENA_CONFIG_FILE` read-only secret JSON yükler; env önceliklidir. Identity production key ring external PFX ile şifrelenir (eski plaintext satırlar otomatik çevrilmez). Container/TLS/hosting smoke henüz yok; `runbooks/DEPLOYMENT.md` ayrıntıları ve kalan release kapılarını açıklar.

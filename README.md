@@ -104,7 +104,7 @@ See [docs/STATUS.md](docs/STATUS.md) and [docs/RELEASE_CHECKLIST.md](docs/RELEAS
 | Production containers/TLS proxy/controlled migration | Config and runbook prepared; Docker/hosting path unverified |
 | Billing/teams/subscriptions | Out of scope |
 
-Portfolio v1 code/test gates pass locally; final release is **blocked only by external access** (Docker/hosting/TLS, remote CI, GitHub private reporting, production egress, monitoring receiver). Current checks: 94 backend unit, 145 SQL integration, 29 frontend unit and 8 Playwright tests (9 screens × 4 widths plus editor/share/webhook screens with axe). [Load sample and assumptions](docs/LOAD_TEST.md) do not establish hosting capacity or prices.
+Portfolio v1 code/test gates pass locally; final release is **blocked only by external access** (Docker/hosting/TLS, production egress, monitoring receiver). GitHub Actions CI (scans, backend + SQL Server, frontend, Playwright E2E) passes on `main`; private vulnerability reporting is enabled. Current checks: 94 backend unit, 145 SQL integration, 29 frontend unit and 8 Playwright tests (9 screens × 4 widths plus editor/share/webhook screens with axe). [Load sample and assumptions](docs/LOAD_TEST.md) do not establish hosting capacity or prices.
 
 ## Demo walkthrough
 

@@ -1,6 +1,6 @@
 # Durum
 
-Son güncelleme: 2026-10-07
+Son güncelleme: 2026-10-10
 
 | Aşama | Ad | Bağımlılık | Durum | Not |
 |---|---|---|---|---|
@@ -16,12 +16,12 @@ Son güncelleme: 2026-10-07
 | 09 | Örnek istemci, demo | 05, 08 | Done | |
 | 10 | Arayüzün tamamlanması | 08, 09 | Done | Görsel QA: Playwright ekran görüntüleri + axe |
 | 11 | MVP güvenlik denetimi | 10 | Done | docs/SECURITY_REVIEW.md; F6 (DataProtection anahtar şifrelemesi) yayın kapısı |
-| 12 | MVP CI, çıkış kapısı | 11 | Done | Workflow yazıldı, **remote run doğrulanmadı** (push/remote yok); Docker yolu doğrulanamadı |
+| 12 | MVP CI, çıkış kapısı | 11 | Done | GitHub Actions CI 2026-10-10 yeşil (4 iş); Docker yolu doğrulanamadı |
 | 13 | Webhook hedefleri, worker | 12 | Blocked (production) / yerel Done | Uygulama katmanı SSRF korumaları, outbox, HMAC doğrulama tamam ve testli; **production egress kısıtı uygulanmadı/doğrulanmadı** → production'da flag kapalı kalmalı |
 | 14 | Webhook senaryoları, örnek alıcı | 13 | Done (yerel) | Production kullanımı 13'teki egress kapısına bağlı |
 | 15 | Özel senaryo editörü | 12 (05, 07) | Done | Backend + editör UI (önizleme=simülatör, içe/dışa aktarma, sürümler, arşiv); Stage15 + E2E |
 | 16 | Paylaşım, yaşam döngüsü, ops | 12, 13 | Done (yerel) | Paylaşım, retention işi, metrikler, hesap silme, restore drill testli; **izleme alıcısı/alarmlar bağlanmadı**, production yedek/anahtar restore Blocked |
-| 17 | v1 yayınlama ve son kabul | 13–16 | Blocked (dış erişim) | Kod/test kapıları yerelde geçti; Docker/hosting/TLS/remote CI/GitHub reporting/egress/alert alıcısı erişimi yok — public yayın yapılmadı |
+| 17 | v1 yayınlama ve son kabul | 13–16 | Blocked (dış erişim) | Kod/test kapıları yerelde geçti; Docker/hosting/TLS/egress/alert alıcısı erişimi yok — kod GitHub'da public (MertDas24/api-arena), uygulama yayında değil |
 | 18 | Gelir modeli doğrulama (opsiyonel) | 17 | NotStarted | Kapsam dışı (kullanıcı kararı) |
 | 19 | Ekipler/CI/abonelik (opsiyonel) | 17, 18 | NotStarted | Kapsam dışı (kullanıcı kararı) |
 

@@ -63,7 +63,7 @@ Durum değerleri: `Planned`, `InProgress`, `Verified` (otomatik test/komut kanı
 | SEC-02 | ProblemDetails + correlation ID; prod'da stack trace yok | 01 | ProblemDetails + correlation; prod'da iç detay yok | `Stage11…Unhandled_errors_in_production…` | Verified |
 | SEC-03 | Repo'da secret yok; .env.example boş | 01/17 | `.gitignore`, `.dockerignore`, `.env.example`, `.gitleaks.toml` | 2026-10-07 gitleaks 8.30.1 checksum doğrulandı, working tree 0; geçmiş yok | Verified (working tree) |
 | SEC-04 | XSS: düz metin render | 06/08 | React düz metin, `dangerouslySetInnerHTML` yok | `components.test.tsx` (XSS), `Stage07_08` HTML export | Verified |
-| SEC-05 | Dependency + secret taraması | 11/12 | `scripts/security-scan.sh`, CI `security` işi | dotnet vulnerable: 0; npm prod: 0; gitleaks: 0 — CI remote çalıştırılmadı | Partial |
+| SEC-05 | Dependency + secret taraması | 11/12 | `scripts/security-scan.sh`, CI `security` işi | dotnet vulnerable: 0; npm prod: 0; gitleaks: 0 — GitHub Actions security işi yeşil (2026-10-10) | Verified |
 | SEC-06 | Özel senaryo sandbox kuralları | 15 | `CustomScenarioCompiler` (katı şema, limitler), `/import` (32 KiB, bilinmeyen alan reddi) | `Stage15_CustomScenarioTests` (14 geçersiz tanım, import saldırıları, text/plain + CSP); E2E geçersiz route hatası | Verified |
 | SEC-07 | Export dosya adı sunucu üretimli | 08 | Sunucu üretimli dosya adı | `Stage07_08…Html_export…` (regex), E2E | Verified |
 | OPS-01 | Liveness DB'den bağımsız; readiness DB'ye bağlı | 01 | `Infrastructure/Web/HealthEndpoints.cs`, `/api/health` | `Liveness_is_independent_of_database_but_readiness_is_not`, `Liveness_and_readiness…` | Verified |
@@ -72,7 +72,7 @@ Durum değerleri: `Planned`, `InProgress`, `Verified` (otomatik test/komut kanı
 | OPS-04 | Retention temizliği idempotent, leased, batch sınırlı | 16 | `Application/Ops/RetentionService.cs`, `Jobs/OpsJobs.cs` (lease'li outbox işi, batch sınırlı) | `Stage16…Retention_is_bounded_idempotent…` (7/30 gün, silinen proje, ikinci tur 0) | Verified |
 | OPS-05 | Düşük kardinaliteli metrikler | 16 | `Application/Ops/ArenaMetrics.cs` (APIArena meter), worker gauge örnekleme; `runbooks/OPERATIONS.md` alarm tanımları | `Stage16…Metrics_use_only_low_cardinality_tags`; **alıcı/alert bağlı değil** | Partial |
 | OPS-06 | Yedek/restore tatbikatı | 16/17 | `scripts/restore-drill.ps1` | 3 migration→CHECKSUM→VERIFYONLY→yeni DB restore→CHECKDB→marker; prod encrypted backup/PFX restore ayrı blocked | Verified (local) |
-| OPS-07 | CI workflow | 12 | `.github/workflows/ci.yml`, `scripts/ci-sql.sh` | actionlint 1.7.12 temiz; remote run doğrulanmadı | Partial |
+| OPS-07 | CI workflow | 12 | `.github/workflows/ci.yml`, `scripts/ci-sql.sh` | actionlint temiz; GitHub Actions 2026-10-10 dört iş yeşil | Verified |
 | OPS-08 | Production container/config/runbook | 17 | `infra/*`, secret JSON, PFX encryption, `--migrate`, `runbooks/DEPLOYMENT.md` | YAML/static checks, production guard + Stage17_ProxyTests, migration job iki kez; Docker/hosting/TLS/scan yok | Partial |
 | OPS-09 | Sınırlı yerel yük testi | 17 | `Stage17_BoundedLoadTests`, `scripts/load-test.ps1` | 3 run/63 inbound/12 poll/20 job, SQL writes+CPU/RAM/p95/fixture lag; `LOAD_SAMPLE.json` | Verified (local) |
 | UX-01 | Türkçe merkezi metinler | 10 | `frontend/src/lib/i18n/tr.ts` | Kod incelemesi | Verified |

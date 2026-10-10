@@ -1,6 +1,6 @@
 # API Arena — portföy anlatımı
 
-**Mevcut seviye:** yerelde doğrulanmış çekirdek MVP + yerel webhook/backend özel senaryo çalışmaları. Portföy v1 final kabulü Blocked (editör UI, paylaşım, retention/metrics ve production kanıtları eksik). Public deployment yapılmadı. Gerçek ödeme/abonelik yok.
+**Mevcut seviye:** Çekirdek MVP ve portföy v1 özellikleri (özel senaryo editörü, salt okunur paylaşım, retention, metrikler, yerel webhook demosu) yerelde uygulanmış ve testli; GitHub Actions CI yeşil. Uygulama public olarak yayında değil (hosting/Docker/TLS/egress kapıları açık). Gerçek ödeme/abonelik yok.
 
 ## 60 saniyelik demo
 Demo öncesinde `scripts/dev.ps1`, kayıt + dev mailbox doğrulama, bir proje ve yanlış/düzeltilmiş retry koşularını hazırla. `scripts/demo.ps1 -Scenario retry-503` gerçek örnek istemciyi çalıştırır; süre hazırlık hariçtir.
@@ -18,7 +18,7 @@ Demo öncesinde `scripts/dev.ps1`, kayıt + dev mailbox doğrulama, bir proje ve
 - “Koşu ve sayaç yarışlarını SQL transaction/atomic update ile yönettim; kullanıcı izolasyonu, CSRF, run-key revoke ve SSRF kontrollerini gerçek SQL/Kestrel testleriyle doğruladım.”
 - “Yerel webhook demo alıcısında HMAC doğrulama, transaction içinde event dedup ve aggregate version guard uyguladım; at-least-once teslimi ve eksik kanıt sınırlarını belgeledim.”
 
-Tamamlanmamış editör/paylaşım/retention özelliklerini CV'de canlı özellik gibi yazma. “Production'da yayımladım” veya “tam güvenli” deme.
+Uygulamayı "production'da yayımladım" veya "tam güvenli" diye anlatma; yayında değil ve production egress/izleme kapıları açık. Webhook özelliğini "yerel demo, production'da kapalı" diye anlat.
 
 ## Mühendislik kararları
 - Modüler monolit: Domain saf kararlar, Application use-case, Infrastructure SQL/Identity/network; ayrı API/Simulator/Worker hostları, ortak DB.
@@ -39,6 +39,6 @@ Mockoon, WireMock ve Webhook.site benzer ihtiyaçları karşılayabilir. API Are
 ![Gözlemlerden üretilmiş rapor](docs/screenshots/passed-report-1280.png)
 
 ## Sınırlar ve kanıt
-`docs/RELEASE_CHECKLIST.md` tüm kapıları listeler. 94 unit, 139 SQL integration, 29 frontend ve 5 E2E geçti. 9 mevcut ekran mobile/axe ile kontrol edildi; bu yeni v1 editör/webhook UI için kapsam garantisi değil. Bounded loopback load + SQL checksum restore drill yapıldı; hosting kapasitesi/maliyeti ölçülmedi. MIT seçildi; private reporting kanalı GitHub repo kurulumunu bekliyor.
+`docs/RELEASE_CHECKLIST.md` tüm kapıları listeler. 94 unit, 145 SQL integration, 29 frontend ve 8 Playwright E2E testi geçti; aynı testler GitHub Actions'ta her push'ta koşar. Ekranlar mobil genişliklerde ve axe ile kontrol edildi. Bounded loopback load + SQL checksum restore drill yapıldı; hosting kapasitesi/maliyeti ölçülmedi. Lisans MIT; güvenlik bildirimi GitHub private vulnerability reporting üzerinden.
 
 Deftere yazılabilir mimari: [docs/MERT_ARCHITECTURE.md](docs/MERT_ARCHITECTURE.md).
