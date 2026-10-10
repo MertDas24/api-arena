@@ -4,6 +4,10 @@
 
 Connect your application to **controlled API failure scenarios**, watch what it actually sends, and get an **evidence-based report** — then fix your client and compare the next run.
 
+[![API Arena — 1-minute demo (click to watch)](docs/media/demo-thumbnail.png)](docs/media/api-arena-demo.webm)
+
+*1-minute demo (Turkish UI, no audio): a naive client gives up on the first 503; the fixed client retries with the same Idempotency-Key and backoff (503 → 503 → 200); the report and before/after comparison show the evidence.*
+
 > Similar tools exist (Mockoon, WireMock, Webhook.site). API Arena's focus is a guided, explain-as-you-go flow for junior developers and small teams. This is a learning/portfolio project and a market hypothesis — no validated demand or revenue.
 
 | Scenario | What the fake service does | What is evaluated (from server-observed HTTP only) |
